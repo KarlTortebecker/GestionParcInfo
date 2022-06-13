@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MaterielService {
@@ -18,4 +19,11 @@ public class MaterielService {
     public void addMateriel(Materiel materiel){
         materielRepository.save(materiel);
     }
+    public void removeMaterielById(Long id){
+        materielRepository.deleteById(id);
+    }
+    public Optional<Materiel> getMaterielById(Long id){
+        return materielRepository.findById(id);
+    }
+
 }

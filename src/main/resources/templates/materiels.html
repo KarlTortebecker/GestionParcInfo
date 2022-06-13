@@ -164,8 +164,8 @@
               <td th:text="${materiel.categorie.nom}"></td>
               <td th:text="${materiel.bureau.nom}"></td>
 
-              <td><a href="" th:href="@{/admin/materiel/delete/{id}(id=${category.id})}" class="btn btn-danger">Delete</a></td>
-              <td><a href="" th:href="@{/admin/materiel/update/{id}(id=${category.id})}" class="btn btn-warning">Update</a></td>
+              <td><a href="" th:href="@{/admin/materiel/delete/{id}(id=${materiel.id})}" class="btn btn-danger">Delete</a></td>
+              <td><a href="" th:href="@{/admin/materiel/update/{id}(id=${materiel.id})}" class="btn btn-warning">Update</a></td>
 
             </tr>
             </tbody>

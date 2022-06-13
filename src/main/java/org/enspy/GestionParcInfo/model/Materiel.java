@@ -25,18 +25,20 @@ public class Materiel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "materiel_id")
     private Long id;
 
     @NotEmpty
     @Column(nullable = false)
     private String nom;
 
+
+    private String description;
+
     private String nomFabricant;
 
     private int dureevieestimee;
 
-    private LocalDate dateachat;
+    private String dateachat;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(
@@ -48,8 +50,8 @@ public class Materiel implements Serializable {
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(
             name = "materiel_panne",
-            joinColumns = {@JoinColumn(name = "MATERIEL_ID", referencedColumnName = "ID")},
-            inverseJoinColumns = {@JoinColumn(name="PANNE_ID", referencedColumnName = "ID")})
+            joinColumns = {@JoinColumn(name = "MATERIEL_ID", referencedColumnName = "Id")},
+            inverseJoinColumns = {@JoinColumn(name="PANNE_ID", referencedColumnName = "Id")})
     private List<Panne> pannes;
 
     @ManyToOne

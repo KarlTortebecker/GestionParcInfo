@@ -9,8 +9,10 @@ public class MaterielDTO {
 
     private Long id;
     private String nomFabricant;
+    private String nom;
+    private String description;
     private int dureevieestimee;
-    private LocalDate dateachat;
-    private Long bureauId;
-    private Long categorieId;
+    private String dateachat;
+    private int bureauId;
+    private int categorieId;
 }

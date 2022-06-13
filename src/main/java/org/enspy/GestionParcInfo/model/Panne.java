@@ -27,7 +27,7 @@ public class Panne implements Serializable {
 
     private String type;
 
-    private String materielaffecte;
+    private String catMatAff;
 
     private String description;
 
